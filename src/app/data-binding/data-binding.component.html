@@ -1,0 +1,79 @@
+<section>
+  <article>
+    <h3>Input/Output Properties</h3>
+    <app-curso [nomeCurso]='nomeDoCurso'></app-curso>
+
+    <br>
+
+    <app-contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-contador>
+
+  </article>
+</section>
+
+  <hr>
+  <hr>
+
+  <section>
+  <!-- <article>
+		<h3>Example of interpolation / Exemplos de Interpolação</h3>
+		<p>String renderizada com interpolação: {{ url }}</p>
+		<p>Resultado de 1 + 1 é {{ 1 + 1 }}</p>
+		<p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+		<p>Expressões matemáticas e boolean = {{ cursoAngular && getCurtirCurso() == true ? 'Verdadeiro' : 'Falso' }}
+		</p>
+	</article> -->
+
+  <!--<article>
+    <h3>Property Binding</h3> Valor do componente para o template
+    <img src="{{ urlImagem }}"> <br><br> Default
+    <img [src]="urlImagem"> Propert Binding - Valor do componente para o template
+  </article>-->
+
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="Digite..." (keyup)="onKeyUp($event)"
+          (keyup.enter)="salvarValor(campoInput.value)" (blur)="salvarValor(campoInput.value)" #campoInput>
+      </mat-form-field>
+      <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+    </div>
+  </article>
+
+  <hr>
+
+  <article>
+    <h3>Two-way Data Binding</h3>
+    <div>
+      <!-- 
+        [value] = Pega do componente e envia para o template
+        (input) = Faz a comunicação do template com o componente, atualizando simultaneamente o valor dos dados
+      -->
+      <!-- Exemplo 1 -->
+      <mat-form-field>
+        <input type="text" matInput placeholder="Digite..." [value]="nome" (input)="nome = $event.target.value">
+      </mat-form-field>
+
+      <br>
+      <!-- Exemplo 2 -->
+      <mat-form-field>
+        <input type="text" matInput placeholder="Digite..." [(ngModel)]="nome">
+      </mat-form-field>
+      <p>Você digitou: {{ nome }}</p>
+
+      <br>
+      <!-- Exemplo 3 -->
+      <mat-form-field>
+        <input type="text" matInput placeholder="Digite..." [(ngModel)]="pessoa.nome">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="Digite..." [(ngModel)]="pessoa.idade">
+      </mat-form-field>
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+
+    </div>
+  </article>
+</section>
