@@ -1,27 +1,25 @@
-# DataBinding
+## Exemplo de utilização de Event Binding, Two-way Data Binding e Comunicação entre Componentes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+- Este projeto foi criado com o Angular CLI versão 7.3.5<br/>
+O projeto consiste em um exemplo para demonstrar a utlização de Event Binding, Two-way Data Binding e Comunicação entre Componentes (utilizando @Input e @Output)
 
-## Development server
+## Estrutura do Projeto
+O projeto esta dividido em um unico arquivo:
+ - Front-End, no qual foi utilizado angular para o desenvolvimento da aplicação.
+ 
+ ## Tecnologias
+- Angular CLI  7.3.5
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Como instalar
+Para que o projeto seja compilado é necessário seguir os seguintes passos:
+- Entrar no diretório contendo os arquivos do front-end e executar o comando `npm install`</br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Como Executar
+Para que o projeto seja executado é necessário seguir os seguintes passos:
+- Entrar no diretório contendo os arquivos do front-end e executar o comando `ng serve`.</br>
+Depois acesse `http://localhost:4200/`. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
